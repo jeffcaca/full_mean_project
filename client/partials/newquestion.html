@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="col-xs-6">
+		
+
+		<p><a href="#/dashboard">Home</a>
+	</div>
+	<div class="col-xs-6" style="text-align: right;">
+		<a href="/logout">Logout</a>
+	</div>
+</div>
+
+<hr class="style17">
+
+<form ng-submit="newQuestion()">
+	Question:<input type="text" class="form-control" ng-model="newQ.questionname">
+	Description: <textarea rows="3" cols="3" class="form-control" ng-model="newQ.description"></textarea>
+	
+	<br>
+	<a href="#/dashboard"><button class="btn btn-sm btn-danger">Cancel</button></a>
+	<input type="submit" class="btn btn-sm btn-success" value="Add Question">
+</form>

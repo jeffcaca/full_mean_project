@@ -1,0 +1,28 @@
+<div ng-repeat='question in question'>
+<div class="row">>
+	<div class="col-xs-6">
+		
+
+		<p><a href="#/dashboard">Home</a> | <a href="#/question/{{question._id}}">Go Back to Question</a>
+	</div>
+	<div class="col-xs-6" style="text-align: right;">
+		<a href="/logout">Logout</a>
+	</div>
+
+
+</div>
+<hr class="style17">
+
+	<p>{{question.questionname}}</p>
+	<p>{{question.description}}</p>
+</div>
+
+
+<hr class="style17">
+
+	<form ng-submit="newAnswer()">
+		Your Answer: <textarea rows="3" cols="3"  class="form-control" ng-model="newAns.description"></textarea><br>
+		Supporting Details(optional): <textarea rows="3" cols="3"  class="form-control" ng-model="newAns.details"></textarea><br>
+		<a href="#/dashboard"><button class="btn btn-sm btn-danger">Cancel</button></a>
+		<input type="submit" class="btn btn-sm btn-success" value="Submit">
+	</form>

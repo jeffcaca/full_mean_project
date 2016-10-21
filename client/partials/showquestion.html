@@ -1,0 +1,34 @@
+<div class="row">
+	<div class="col-xs-6" ng-repeat="question in question">
+		
+
+		<p><a href="#/dashboard">Home</a> | <a href="#/question/{{question._id}}/new">Answer Question</a>
+	</div>
+	<div class="col-xs-6" style="text-align: right;">
+		<a href="/logout">Logout</a>
+	</div>
+</div>
+<div ng-repeat="question in question">
+<hr class="style17">
+
+<h2>{{question.questionname}}</h2>
+<p>{{question.description}}</p>
+
+
+<hr class="style17">
+
+<div ng-repeat="answer in answers | orderBy:'like':true">
+<div class="row" >
+		<div class="col-xs-9">
+<p>{{answer.username}} </p>
+<p>{{answer.description}} </p>
+<p>{{answer.details}} </p>
+
+		</div>
+		<div class="col-xs-3" style="text-align: right">
+		{{answer.like}} Likes    <button class="btn btn-sm btn-info" ng-click="like(answer._id)">Like</a> 
+		</div>
+		
+</div>
+<hr class="style17">
+</div>
